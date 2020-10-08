@@ -11,6 +11,7 @@ button{
     align-self: center;
     font-size: 1.4em;
     text-align: center;
+    border-radius: 5px;
 }
 
 body{
