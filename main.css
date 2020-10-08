@@ -1,0 +1,64 @@
+button{
+    width:200px;
+    height: 50px;
+    border: 1px solid #25090F;
+    background-color: #09250a;
+    color: hsl(130, 68%, 55%);
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 4vh;
+    align-self: center;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+body{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Anonymous Pro', 'roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(8, 6%, 20%);
+    color: hsl(127, 70%, 60%);
+}
+
+html form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+    align-items: flex-start;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1vh 1vw;
+    margin: 3vh 2vw;
+}
+
+button:hover {background-color: #195688}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px rgb(194, 187, 187);
+  transform: translateY(4px);
+}
+
+
+.startPage{
+    text-align:center;
+}
+
+.endOfQuiz{
+    text-align:center;
+}
+
