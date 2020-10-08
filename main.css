@@ -10,8 +10,11 @@ button{
     margin-top: 4vh;
     align-self: center;
     font-size: 1.4em;
-    text-align: center;
     border-radius: 5px;
+    text-align: center;
+}
+.buttonOnPage{
+    text-align: center;
 }
 
 body{
