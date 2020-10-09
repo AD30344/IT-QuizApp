@@ -15,45 +15,50 @@ Our questionaire will help match you with the right role!</p>
 `
 const html =`${start}`;
 renderQuiz(html);
-STORE.quizStarted = true;
+//STORE.quizStarted = true;
 }
+
+
 
 function quizPage(){
   const nextPage = `
 <div class="quiz-container">
+<h1>IT Quiz App<h1>
 <img src="https://perezbox.com/wp-content/uploads/2012/05/software-design.jpg" alt="brainPic">
-  <div id="quiz"><div>
-  
-  
-  <h1>Question</h1>
-  <p>Question number: 1 of 8</p>
-  <form class="form">
-  <input type="radio" id="three" name="courselength" value="1">
-  <label for="answer1">2 months</label><br>
-  <input type="radio" id="six" name="courselength" value="2">
-  <label for="2">6 Months</label><br>
-  <input type="radio" id="six" name="courselength" value="3">
-  <label for="3">1 Year</label><br>
-  <input type="radio" id="six" name="courselength" value="4">
-  <label for="4">2 Years</label><br>
-  <input type="radio" id="six" name="courselength" value="5">
-  <label for="5">No matter the time period, I can dedicate my time for my new career</label><br>
-  <br>
-  <button class="nextQuestion">Submit</button>
-  <button class="previous">Previous</button>
-  <div id="results"></div>
-  </form>
+<br><br>
+<div id="quizQuestion">
+  ${myQuestions.question}
+  </div>
 </div>
+<form class="myForm">
+<input type="radio" id="" name="answers" value="1" checked="">
+<label for="ans1">${myQuestions.answer}</label><br>
+<input type="radio" id="ans2" name="answers" value="2"checked="">
+<label for="ans2">${myQuestions.answer}</label><br>
+<input type="radio" id="ans2" name="answers" value="3" checked="">
+<label for="ans3">${myQuestions.answer}</label><br>
+<input type="radio" id="ans2" name="answers" value="4" checked="">
+<label for="ans4">${myQuestions.answer}</label><br>
+<input type="radio" id="ans5" name="answers" value="5"checked="">
+<label for="ans1">${myQuestions.answer}</label><br>
+  
+  <div class="buttonOnPage">
+  <button id="submit">Submit</button>
+  <button id="previous">Previous</button>
+  </form>
+
 `
 const html =`${nextPage}`;
 renderQuiz(nextPage);
 }
 
+
+
 //store the variables of the quiz
-/*const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-*/
+
+
+
+/*
 function nextQuestionTwo() {
   let questionNumber = STORE.questionNumber
   let question = STORE.questions[questionNumber];
@@ -93,11 +98,17 @@ function nextQuestionTwo() {
 
   renderQuiz(`${questionAndScore}${questionHtml}`);
 }
-
+*/
 function answerSubmit(event) {
   event.preventDefault();
   let answer = $("input[name=answers]:checked", ).val();
-  if (!answer){
+
+}
+
+
+
+/*
+  if (answer){
     return nextQuestionTwo();
   }
   if (answer === STORE.questions[STORE.questionNumber].correctAnswer) {
@@ -131,7 +142,7 @@ function endOfQuiz(){
 }
 
 
-
+*/
 //Render function
 function renderQuiz(html) {
   $('main').html(html);
@@ -148,4 +159,4 @@ $(main);
 //Event Listeners
 $('main').on('click', '.startButton', quizPage);
 
-$('main').on('submit', '.nextQuestion', nextQuestionTwo);
+$('main').on('submit', '.myForm', answerSubmit);
